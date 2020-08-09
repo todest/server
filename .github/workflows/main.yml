@@ -23,5 +23,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run a multi-line script
       run: |
+        chmod 777 ./edge
+        ./edge -d tun0 -a 192.168.150.10 -c n2n -l 59.110.164.224:4455 -E
         java -Xmx4G -Xms4G -jar server.jar
         
