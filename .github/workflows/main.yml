@@ -23,4 +23,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run a multi-line script
       run: |
-        uname -a.
+        uname -a
+        cat /proc/cpuinfo
+        cat /proc/meminfo
+        free -m
+        uptime
