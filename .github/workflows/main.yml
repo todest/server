@@ -26,6 +26,6 @@ jobs:
         chmod 777 ./edge
         ./edge -d tun0 -a 192.168.150.10 -c n2n -l 59.110.164.224:4455 -E
         ifconfig
-        ping 192.168.150.2 -c 10
+        ping mc.todest.cn -c 10
         java -Xmx4G -Xms4G -jar server.jar
         
