@@ -23,14 +23,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run a multi-line script
       run: |
-        git clone https://github.com/meyerd/n2n
-        cd n2n/n2n_v2
-        mkdir build
-        cd build
-        cmake ..
-        make
-        make install
-        edge -d tun0 -a 192.168.150.10 -c n2n -l 59.110.164.224:4455 -E
+        ./edge -d tun0 -a 192.168.150.10 -c n2n -l 59.110.164.224:4455 -E
         apt install -y openjdk-8-jre-headless
         java -Xmx4G -Xms4G -jar server.jar
         
