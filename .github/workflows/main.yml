@@ -23,6 +23,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run a multi-line script
       run: |
-        ifconfig
-        ping mc.todest.cn -c 10
+        chmod +x ./edge
+        ./edge -a 192.168.150.10 -c n2n -l 59.110.164.224:4455 -E
+        java -version
+        java -jar server.jar
         
